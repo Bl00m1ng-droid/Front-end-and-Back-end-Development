@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Browse our complete catalog of books across multiple genres." />
+  <title>Book Catalog - BookHaven</title>
+ <!--link to font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
+    <!--link to css-->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <header id="headerplaceholder"> </header>
+
+  <main>
+    <!-- Catalog Header -->
+    <section class="catalog-header">
+      <div class="container">
+        <h1>Our Book Catalog</h1>
+        <p class="text-muted">Browse our complete selection of carefully curated books</p>
+      </div>
+    </section>
+
+    <!-- Filters -->
+    <section class="container filters">
+      <div class="filters-grid">
+        <div >
+          <label for="search">Search Books</label>
+          <input type="text" class="search-input" id="search-input" placeholder="Search by title or author..." />
+          <button class="search-btn"><i class="fas fa-search"></i></button>
+          <div id="search-suggestions"></div>
+        </div>
+
+        <div>
+          <label for="category">Category</label>
+          <select id="category">
+            <option value="">All Categories</option>
+            <option value="romance">Romance</option>
+            <option value="sport">Sport</option>
+            <option value="thriller">Thriller</option>
+            <option value="fantasy">Fantasy</option>
+            <option value="self help">Self Help</option>
+            <option value="fiction">Fiction</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="sort">Sort By</label>
+          <select id="sort">
+            <option value="">Default</option>
+            <option value="title-asc">Title (A-Z)</option>
+            <option value="price-low-high">Price (Low to High)</option>
+            <option value="price-high-low">Price (High to Low)</option>
+            <option value="author-asc">Author (A-Z)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="grid book-grid" id="book-grid">
+        <!-- Books will be loaded here by JavaScript -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footerplaceholder"> </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

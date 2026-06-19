@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Book Haven</title>
+   <!--link to font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
+    <!--link to css-->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header id="headerplaceholder"></header>
+<main class="section">
+   
+     <section class="section-header">
+      <div class="container">
+        <h1 class="section-title">Your Shopping Cart</h1>
+        <p class="text-muted">Review the items in your cart before proceeding to checkout.</p>
+      </div>
+    </section>
+  
+      <section class="cart-layout">
+        <div class="cart-items" id="cart-items">
+           <!-- items will be dynamically loaded -->
+        </div>
+      
+    <div class="cart-summary">
+      <h5 class="title-lg">Cart Summary</h5>
+      <h3>Total: R<span id="cart-total">0.00</span></h3>
+
+      <div class="voucher-section">
+        <p>Have a voucher code?</p>
+        <input type="text" placeholder="Enter voucher code">
+        <button class="btn btn-secondary">Apply Voucher</button>
+      </div>
+
+      <button class="btn btn-primary" id="checkoutBtn">
+        Proceed to Checkout
+      </button>
+
+      <button class="btn btn-secondary" id="continueShoppingBtn">
+        Continue Shopping
+      </button>
+    </div>
+
+  </section>
+
+</main>
+
+<footer id="footerplaceholder"></footer>    
+<script src="script.js"></script>
+
+</body>
+</html>

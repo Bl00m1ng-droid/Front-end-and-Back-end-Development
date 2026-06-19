@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Haven</title>
+    <!--link to font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
+    <!--link to css-->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!--header-->
+    <header id="headerplaceholder"></header>
+
+    <div class="auth-section">
+      <div class="container">
+        <div class="auth-card">
+
+      <!-- Title -->
+      <div class="section-header">
+        <h1 class="section-title">Join Book Haven</h1>
+        <p class="section-desc">Create your account and start exploring</p>
+      </div>
+
+      <!-- Form -->
+      <form class="auth-form">
+
+        <div class="form-group">
+          <label for="username">User Name</label>
+          <input type="text" id="username" placeholder="Your user name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="you@example.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="address">Address</label>
+          <input type="text" id="address" placeholder="Your address" required>
+        </div>
+
+        <div class="form-group">
+          <label for="type">User Type</label>
+          <select class="input" id="type" required>
+            <option value="">Select User Type</option>
+            <option value="customer">Customer</option>
+            <option value="admin">Admin</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="••••••••" required>
+        </div>
+
+        <div class="form-group">
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" placeholder="••••••••" required>
+        </div>
+
+        <label class="checkbox-group">
+          <input type="checkbox" required>
+          <span>
+            I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+          </span>
+        </label>
+
+        <button type="submit" class="btn btn-primary btn-full">
+          Create Account
+        </button>
+
+      </form>
+
+      <!-- Divider -->
+      <div class="divider">
+        <span>or</span>
+      </div>
+
+
+      <!-- Login -->
+      <div class="auth-footer">
+        <p>
+          Already have an account?
+          <a href="signIn.html">Sign in</a>
+        </p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+    <!--footer-->
+    <footer  id="footerplaceholder"></footer>
+    
+<script src="script.js"></script>
+</body>
+</html>

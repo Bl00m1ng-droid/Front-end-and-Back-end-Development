@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Haven</title>
+    <!--link to font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
+    <!--link to css-->
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+<header class="header">
+    <div class="container header-container">
+
+        <!-- Logo -->
+        <a href="#" class="logo">
+            <i class="fa-solid fa-book-open fa-xl logo-icon"></i>
+            <div class="logo-text">Book <span>Haven</span></div>
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-btn" id="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Navigation -->
+        <nav class="nav" id="nav-menu">
+            <ul>
+                <li><a class="homeLink" href="index.html">Home</a></li>
+                <li><a href="Catalog.html">Catalog</a></li>
+                <li><a href="#aboutUs">About Us</a></li>
+                <li><a href="#contactUs">Contact</a></li>
+                <li><a class="wishlist-link" href="Wishlist.html"><i class="fas far fa-heart"></i>
+                     <span id="wishlist-count" class="cart-count"></span>
+                </a></li>
+                <li><a cart="cart-link" href="Cart.html"><i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count" class="cart-count"></a></li>
+
+                <li class="user-menu">
+    <a href="signIn.html" id="auth-link">
+        <i class="fas fa-user"></i>
+        <span id="auth-text">Sign In</span>
+    </a>
+</li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+<script src="script.js"></script>
+</body>
+</html>

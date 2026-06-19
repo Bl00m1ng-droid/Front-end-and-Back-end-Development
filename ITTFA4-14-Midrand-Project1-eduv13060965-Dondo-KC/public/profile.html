@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Haven</title>
+    <!--link to font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
+    <!--link to css-->
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+<header id="headerplaceholder"></header>
+<section class="section">
+    <div class="section-header">
+      <h2 class="section-title">My Profile</h2>
+      <p class="section-subtitle">Manage your account information.</p>
+    </div>
+
+    <section class="profile-section">
+      <div class="profile-card">
+        <div class="profile-header">
+          
+          <div id="profile-details" class="card profile-card">
+             <!-- User details will be injected here -->
+          </div>
+<!-- Profile actions -->
+        <div class="profile-actions">
+          <button class="btn btn-primary">Edit Profile</button>
+          <button class="btn btn-secondary">View Orders</button>
+          <button class="btn btn-secondary" id="signOutbtn" onclick="logout()">Sign out</button>
+        </div>
+      </div>
+    </section>
+  </div>
+</section>
+
+<footer id="footerplaceholder"></footer>    
+<script src="script.js"></script>
+</body>
+</html>
