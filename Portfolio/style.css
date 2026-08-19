@@ -167,14 +167,16 @@ span{
   border-color: var(--softTan);
 }
 section{
-  min-height: 100vh;
-  padding: 12rem 15% 10rem;
+  min-height: auto;
+  padding: 8rem 10%;
+  scroll-margin-top: 9rem;
 }
 .home{
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap:15rem;
+  gap:8rem;
 }
 .home-content{
   display: flex;
@@ -328,9 +330,9 @@ section{
 }
 .heading{
   text-align: center;
-  font-size: 6rem;
+  font-size: 5.5rem;
   font-weight: 600;
-  margin: 0 0 6rem;
+  margin: 0 0 4rem;
   position: relative;
 }
 .heading::after{
@@ -338,7 +340,7 @@ section{
   display: block;
   width: 8rem;
   height: 2px;
-  margin: 2rem auto 0;
+  margin: 1.5rem auto 0;
   background-image: linear-gradient(90deg, var(--softTan) 60%, transparent 40%);
   background-size: 10px 2px;
 }
@@ -361,7 +363,7 @@ section{
   align-items: center;
   background-color: rgba(107,78,58,0.35);
   border: 1px solid rgba(255,241,233,0.08);
-  min-height: 420px;
+  min-height: 280px;
   border-radius: 2rem;
   cursor: pointer;
   transition: 0.4s ease-in-out;
@@ -378,7 +380,7 @@ section{
   text-align: center;
   justify-content: center;
   align-items: center;
-  padding: 4rem;
+  padding: 3rem;
 }
 .service-info h4{
   font-size: 3.2rem;
@@ -402,8 +404,8 @@ section{
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
   align-items: stretch;
-  gap:3rem;
-  row-gap: 5rem;
+  gap:2.5rem;
+  row-gap: 3rem;
 }
 .project-card{
   display: flex;
@@ -414,8 +416,8 @@ section{
   background-color: var(--blacky);
   border: 1px solid rgba(255,241,233,0.12);
   border-radius: 2rem;
-  gap:1.5rem;
-  padding:4rem 2.5rem;
+  gap:1.2rem;
+  padding:2.5rem 2rem;
   overflow: hidden;
   cursor: pointer;
   box-shadow: 0 10px 30px rgba(0,0,0,0.25);
@@ -679,69 +681,288 @@ footer{
   }
 
 }
-@media(max-width:768px){
-  html{
+@media (max-width: 768px) {
+
+  html {
     font-size: 55%;
   }
-  .home-content h1{
-    font-size: 5rem;
+
+  section {
+    min-height: auto;
+    padding: 6rem 6%;
+    scroll-margin-top: 8rem;
   }
-  .home-content h3{
-    font-size: 2.4rem;
-  }
-  .about-content h2{
-    font-size: 4rem;
-  }
-  section{
-    padding: 4rem 6% 4rem;
-  }
-  .home, .about{
+
+  /* HOME */
+  .home {
+    min-height: 100vh;
+    padding-top: 10rem;
+    padding-bottom: 6rem;
+    flex-direction: column-reverse;
     gap: 3rem;
   }
-  .home-img img, .about-img img{
-    width: 80%;
-    margin:0 auto;
+
+  .home-content {
+    align-items: center;
+    text-align: center;
   }
-  .home-img,
-  .about-img {
-    display: flex;
+
+  .home-content h1 {
+    font-size: 5rem;
+  }
+
+  .home-content h3 {
+    font-size: 2.4rem;
+    margin: 0.8rem 0 1.5rem;
+  }
+
+  .home-content p.lead {
+    font-size: 1.5rem;
+    line-height: 1.7;
+    max-width: 55rem;
+  }
+
+  .home-img img {
+    width: 65vw;
+    max-width: 280px;
+  }
+
+  .social-icons a {
+    margin: 1.5rem 0.5rem 1.5rem 0;
+  }
+
+  .btn-group {
+    flex-wrap: wrap;
     justify-content: center;
   }
-  footer{
-    padding:15px;
-  }
-}
 
-@media(max-width:480px){
-  html{
-    font-size: 50%;
+
+  /* ABOUT */
+
+  .about {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 3rem;
   }
-  .home-content h1{
-    font-size: 3.8rem;
+
+  .about-content {
+    max-width: 60rem;
   }
-  .home-content h3{
-    font-size: 2rem;
+
+  .about-content h2 {
+    font-size: 4rem;
+    text-align: center;
+    margin: 0 0 1.5rem;
   }
-  .about-content h2{
-    font-size: 3rem;
+
+  .about-content p {
+    font-size: 1.5rem;
+    line-height: 1.7;
+    margin-top: 1.5rem;
   }
-  .home-content p.lead,
-  .about-content p{
+
+  .about-img img {
+    width: 70%;
+    max-width: 300px;
+  }
+
+
+  /* SECTION HEADINGS */
+
+  .heading {
+    font-size: 4.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .heading::after {
+    margin-top: 1rem;
+  }
+
+
+  /* SKILLS */
+
+  .services-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .service-box {
+    min-height: 0;
+  }
+
+  .service-info {
+    padding: 2.5rem 2rem;
+  }
+
+  .service-info i {
+    font-size: 4.5rem;
+  }
+
+  .service-info h4 {
+    font-size: 2.5rem;
+    margin: 1.2rem 0 1rem;
+  }
+
+  .service-info p {
     font-size: 1.4rem;
     line-height: 1.6;
   }
-  .btn, .gradient-btn{
+
+
+  /* PROJECTS */
+
+  .projects-box {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .project-card {
+    padding: 2rem;
+    gap: 1rem;
+  }
+
+  .project-card img {
+    height: 190px;
+  }
+
+  .project-card h3 {
+    font-size: 2.4rem;
+  }
+
+  .project-card p {
     font-size: 1.4rem;
-    padding: 1rem 2rem;
+    line-height: 1.6;
   }
-  .home-img,
-  .about-img {
-    display: flex;
-    justify-content: center;
+
+
+  /* CONTACT */
+
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin-top: 2rem;
   }
-  .home-img img,
+
+  .contact-form {
+    padding: 2rem;
+  }
+
+  .contact form .input-box {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .contact-details {
+    margin: 2rem 0;
+  }
+
+
+  /* FOOTER */
+
+  footer {
+    padding: 4rem 2rem;
+  }
+
+  .footer ul li {
+    margin: 0.5rem 1rem;
+  }
+
+  .header {
+    padding: 1.8rem 6%;
+  }
+
+  .logo {
+    font-size: 2.2rem;
+  }
+
+  #menu-icon {
+    font-size: 3rem;
+  }
+
+  .navbar {
+    width: 75%;
+    padding: 1.5rem 2rem;
+  }
+
+  .navbar a {
+    font-size: 1.7rem;
+    margin: 1.5rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+
+  html {
+    font-size: 50%;
+  }
+
+  section {
+    padding: 5rem 5%;
+  }
+
+  .home {
+    padding-top: 9rem;
+    gap: 2.5rem;
+  }
+
+  .home-content h1 {
+    font-size: 3.8rem;
+  }
+
+  .home-content h3 {
+    font-size: 2rem;
+  }
+
+  .home-content p.lead,
+  .about-content p {
+    font-size: 1.4rem;
+    line-height: 1.65;
+  }
+
+  .home-img img {
+    width: 70vw;
+  }
+
   .about-img img {
-    width: 85%;
-    margin: 0 auto;
+    width: 75%;
+  }
+
+  .about-content h2 {
+    font-size: 3.2rem;
+  }
+
+  .heading {
+    font-size: 3.8rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .service-info {
+    padding: 2rem 1.5rem;
+  }
+
+  .service-info h4 {
+    font-size: 2.3rem;
+  }
+
+  .project-card {
+    padding: 1.8rem;
+  }
+
+  .project-card img {
+    height: 170px;
+  }
+
+  .btn,
+  .gradient-btn {
+    font-size: 1.4rem;
+    padding: 1rem 1.8rem;
+  }
+
+  .btn-group {
+    gap: 1rem;
+  }
+
+  .contact-form {
+    padding: 1.5rem;
   }
 }
