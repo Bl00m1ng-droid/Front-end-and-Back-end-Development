@@ -1,8 +1,10 @@
 import React from "react";
 import backgroundImage from "../assets/nexwellsafety.jpg";
+import Footer from "../components/Footer";
 
 function Contact() {
   return (
+    <>
     <div
       className="min-h-screen bg-cover bg-center bg-fixed relative"
       style={{
@@ -177,6 +179,8 @@ function Contact() {
         </div>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 }
 

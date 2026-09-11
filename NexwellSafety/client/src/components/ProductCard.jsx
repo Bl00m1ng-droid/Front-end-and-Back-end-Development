@@ -44,7 +44,7 @@ const products = [
   {
     id: 3,
     name: "Two-Tone Reflective Jacket",
-    category: "Protective Clothing",
+    category: "Reflective Jackets",
     description: "Tan and navy blue jacket with reflective stripes for visibility and safety.",
     price: 65.00,
     sizesAvailable: ["S", "M", "L", "XL", "XXL"],
@@ -53,7 +53,7 @@ const products = [
   {
     id: 4,
     name: "Blue High-Visibility Jacket",
-    category: "Protective Clothing",
+    category: "Reflective Jackets",
     description: "High-visibility jacket with reflective stripes, designed for outdoor and industrial work.",
     price: 70.00,
     sizesAvailable: ["M", "L", "XL", "XXL"],
