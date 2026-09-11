@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+@theme {
+  --color-black: #060607;
+  --color-orange: #ff5100;
+  --color-white: #fafafa;
+  --color-lightGray: #a7a7a7;
+  --color-darkGray: #333333;
+}
+
 @keyframes slideIn {
   from { transform: translateX(20px); opacity: 0; }
   to { transform: translateX(0); opacity: 1; }
