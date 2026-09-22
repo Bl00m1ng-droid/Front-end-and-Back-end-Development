@@ -3,7 +3,9 @@ import backgroundImage from "../assets/nexwellsafety.jpg";
 import Footer from "../components/Footer";
 import {useState} from "react";
 
-const [formData, setFormData] = useState({
+function Contact() {
+
+  const [formData, setFormData] = useState({
   name: "",
   surname: "",
   email: "",
@@ -28,7 +30,7 @@ const handleSubmit = async (e) => {
 
     try {
         const response = await fetch(
-            "http://localhost:5000/api/contact",
+            `${import.meta.env.VITE_API_URL}/api/contact`,
             {
                 method: "POST",
 
@@ -68,7 +70,6 @@ const handleSubmit = async (e) => {
     }
 };
 
-function Contact() {
   return (
     <>
     <div
