@@ -28,7 +28,7 @@ const products = [
     name: "Pinnacle Black Safety Boots",
     category: "Safety Footwear",
     description: "Durable leather work boots with rugged soles and elastic side panels for comfort.",
-    price: 85.00,
+    price: 30.00,
     sizesAvailable: ["6", "7", "8", "9", "10", "11", "12"],
     image: pinaclesafetyshoe
   },
@@ -46,7 +46,7 @@ const products = [
     name: "Two-Tone Reflective Jacket",
     category: "Reflective Jackets",
     description: "Tan and navy blue jacket with reflective stripes for visibility and safety.",
-    price: 65.00,
+    price: 27.00,
     sizesAvailable: ["S", "M", "L", "XL", "XXL"],
     image: safetyjacket
   },
@@ -55,7 +55,7 @@ const products = [
     name: "Blue High-Visibility Jacket",
     category: "Reflective Jackets",
     description: "High-visibility jacket with reflective stripes, designed for outdoor and industrial work.",
-    price: 70.00,
+    price: 27.00,
     sizesAvailable: ["M", "L", "XL", "XXL"],
     image: safetyjacket2
   },
@@ -64,7 +64,7 @@ const products = [
     name: "Green & Gray Uniform Shirt",
     category: "Uniforms",
     description: "Two-tone professional uniform shirt with red stripe detail and chest pocket.",
-    price: 40.00,
+    price: 14.00,
     sizesAvailable: ["S", "M", "L", "XL"],
     image: shirt2
   },
@@ -73,7 +73,7 @@ const products = [
     name: "Two Piece worksuit",
     category: "Uniforms",
     description: "Full work uniform with reflective stripes, available in multiple colors for safety.",
-    price: 120.00,
+    price: 13.00,
     sizesAvailable: ["M", "L", "XL", "XXL"],
     image: worksuits
   },
@@ -81,8 +81,8 @@ const products = [
     id: 7,
     name: "Reflective Work Uniform Set",
     category: "Sets",
-    description: "Full work uniform with reflective stripes and matching hat, available in multiple colors for safety.",
-    price: 120.00,
+    description: "Flame and acid resistant workwear set with matching hat, available in multiple colors.",
+    price: 30.00,
     sizesAvailable: ["S","M", "L", "XL", "XXL"],
     image: set
   },
@@ -91,7 +91,7 @@ const products = [
     name: "Black and Gray Uniform Shirt",
     category: "Uniforms",
     description: "Two-tone professional uniform shirt with double pockets",
-    price: 40.00,
+    price: 14.00,
     sizesAvailable: ["S", "M", "L", "XL", "XXL"],
     image: shirt1
   },
@@ -100,14 +100,14 @@ const products = [
     name: "Safety Shoe",
     category: "Safety Footwear",
     description: "Heavy-duty boots with thick soles and reinforced design, ideal for industrial use.",
-    price: 120.00,
+    price: 45.00,
     sizesAvailable: ["6", "7", "8", "9", "10", "11"],
     image: safetyshoe
   },
   {
     id: 10,
     name: "Black Safety Set",
-    price: 850,
+    price: 65.00,
     description: "Durable black safety workwear set designed for comfortable and reliable protection in demanding work environments.",
     sizesAvailable: ["S", "M", "L", "XL"],
     category: "Sets",
@@ -116,7 +116,7 @@ const products = [
   {
     id: 11,
     name: "Dark Multi-Colour Safety Set",
-    price: 900,
+    price: 50.00,
     description: "Practical multi-colour safety workwear set offering durability, comfort, and visibility for everyday work.",
     sizesAvailable: ["S", "M", "L", "XL"],
     category: "Sets",
@@ -125,7 +125,7 @@ const products = [
   {
     id: 12,
     name: "Green Stripe Two-Piece Set",
-    price: 850,
+    price: 50.00,
     description: "Comfortable two-piece workwear set with green reflective striping for improved visibility and workplace safety.",
     sizesAvailable: ["S", "M", "L", "XL"],
     category: "Sets",
@@ -134,7 +134,7 @@ const products = [
   {
     id: 13,
     name: "Grey & Orange Safety Set",
-    price: 900,
+    price: 50.00,
     description: "High-visibility grey and orange workwear set designed for durability and improved visibility on the job.",
     sizesAvailable: ["S", "M", "L", "XL"],
     category: "Sets",
@@ -143,7 +143,7 @@ const products = [
   {
     id: 14,
     name: "Lime Reflective Jacket",
-    price: 550,
+    price: 35.00,
     description: "Bright lime safety jacket with high-visibility reflective detailing, ideal for construction, roadwork, and industrial environments.",
     sizesAvailable: ["S", "M", "L", "XL"],
     category: "Reflective Jackets",
@@ -152,7 +152,7 @@ const products = [
   {
     id: 15,
     name: "Lime Safety Set",
-    price: 900,
+    price: 55.00,
     description: "High-visibility lime workwear set designed to provide comfort, durability, and excellent visibility in low-light environments.",
     sizesAvailable:["S", "M", "L", "XL"],
     category: "Sets",
@@ -161,7 +161,7 @@ const products = [
   {
     id: 16,
     name: "Multi-Colour Safety Set",
-    price: 900,
+    price: 55.00,
     description: "Durable multi-colour safety set suitable for industrial, construction, and general work environments.",
     sizesAvailable: ["S", "M", "L", "XL"],
     category: "Sets",
@@ -170,7 +170,7 @@ const products = [
   {
     id: 17,
     name: "Orange Reflective Jacket",
-    price: 550,
+    price: 35.00,
     description: "High-visibility orange safety jacket with reflective detailing for increased visibility and workplace protection.",
     sizesAvailable: ["S", "M", "L", "XL"],
     category: "Reflective Jackets",
@@ -179,7 +179,7 @@ const products = [
   {
     id: 18,
     name: "Orange Safety Set",
-    price: 900,
+    price: 50.00,
     description: "High-visibility orange workwear set designed for comfort, durability, and increased visibility in demanding work environments.",
     sizesAvailable:["S", "M", "L", "XL"],
     category: "Sets",
@@ -188,7 +188,7 @@ const products = [
   {
     id: 19,
     name: "Reflective Shirt Set",
-    price: 650,
+    price: 50.00,
     description: "Comfortable reflective workwear set designed to improve visibility while providing practical everyday workplace protection.",
     sizesAvailable:["S", "M", "L", "XL"],
     category: "Sets",
@@ -197,7 +197,7 @@ const products = [
   {
     id: 20,
     name: "Reflective Hoodie",
-    price: 600,
+    price: 35.00,
     description: "Warm and comfortable reflective hoodie designed for workers who need additional visibility and protection in cooler conditions.",
     sizesAvailable:["S", "M", "L", "XL"],
     category: "Reflective Jackets",
@@ -206,7 +206,7 @@ const products = [
   {
     id: 21,
     name: "Silver Stripe Worksuit",
-    price: 750,
+    price: 30.00,
     description: "Durable worksuit featuring reflective silver striping for enhanced visibility and protection in industrial and construction environments.",
     sizesAvailable:["S", "M", "L", "XL"],
     category: "Uniforms",
