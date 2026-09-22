@@ -1,6 +1,72 @@
 import React from "react";
 import backgroundImage from "../assets/nexwellsafety.jpg";
 import Footer from "../components/Footer";
+import {useState} from "react";
+
+const [formData, setFormData] = useState({
+  name: "",
+  surname: "",
+  email: "",
+  message: ""
+});
+
+const [status, setStatus] = useState("");
+const [loading, setLoading] = useState(false);
+
+const handleChange = (e) => {
+  setFormData({
+    ...formData,
+    [e.target.name]: e.target.value
+  });
+}
+
+const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    setLoading(true);
+    setStatus("");
+
+    try {
+        const response = await fetch(
+            "http://localhost:5000/api/contact",
+            {
+                method: "POST",
+
+                headers: {
+                    "Content-Type": "application/json"
+                },
+
+                body: JSON.stringify(formData)
+            }
+        );
+
+        const data = await response.json();
+
+        if (!response.ok) {
+            throw new Error(data.message);
+        }
+
+        setStatus("Your message has been sent successfully!");
+
+        setFormData({
+            name: "",
+            surname: "",
+            email: "",
+            message: ""
+        });
+
+    } catch (error) {
+
+        console.error(error);
+
+        setStatus(
+            "Unable to send your message. Please try again."
+        );
+
+    } finally {
+        setLoading(false);
+    }
+};
 
 function Contact() {
   return (
@@ -84,7 +150,7 @@ function Contact() {
                 Fill in the form below and we'll get back to you.
               </p>
 
-              <form action="https://formspree.io/f/maewlkqp" method="post"className="space-y-6">
+              <form action="" method="post" className="space-y-6" onSubmit={handleSubmit}>
 
                 {/* Name + Surname */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -101,6 +167,7 @@ function Contact() {
                       type="text"
                       id="name"
                       name="name"
+                      onChange={handleChange}
                       placeholder="Enter your name"
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition"
                       required
@@ -119,6 +186,7 @@ function Contact() {
                       type="text"
                       id="surname"
                       name="surname"
+                      onChange={handleChange}
                       placeholder="Enter your surname"
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition"
                       required
@@ -140,6 +208,7 @@ function Contact() {
                     type="email"
                     id="email"
                     name="email"
+                    onChange={handleChange}
                     placeholder="you@example.com"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition"
                     required
@@ -159,6 +228,7 @@ function Contact() {
                     id="message"
                     name="message"
                     rows="6"
+                    onChange={handleChange}
                     placeholder="How can we help you?"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg outline-none resize-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition"
                     required
@@ -168,10 +238,16 @@ function Contact() {
                 {/* Submit */}
                 <button
                   type="submit"
-                  className="w-full md:w-auto bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-3 rounded-lg transition duration-300 shadow-md"
+                  disabled={loading}
+                  className="w-full md:w-auto bg-orange-500 hover:bg-orange-600 disabled:bg-gray-400 text-white font-semibold px-8 py-3 rounded-lg transition duration-300 shadow-md"
                 >
-                  Send Message
+                  {loading ? "Sending..." : "Send Message"}
                 </button>
+                {status && (
+                  <p className={`mt-4 text-sm ${status.includes("successfully") ? "text-green-600" : "text-red-600"}`}>
+                    {status}
+                  </p>
+                )}
 
               </form>
             </div>
