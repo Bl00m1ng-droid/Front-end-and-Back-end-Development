@@ -32,6 +32,7 @@ router.post("/contact", contactLimiter, async (req, res) => {
         const { error } = await resend.emails.send({
             from: `Nexwell Website <${process.env.EMAIL_FROM}>`,
             to: [process.env.CONTACT_EMAIL],
+            cc: [process.env.CONTACT_EMAIL_CC],
             replyTo: email,
 
             subject: `New Website Enquiry - ${name} ${surname}`,

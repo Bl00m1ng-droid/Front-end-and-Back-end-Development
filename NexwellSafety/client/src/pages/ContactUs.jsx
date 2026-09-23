@@ -28,6 +28,15 @@ const handleSubmit = async (e) => {
     setLoading(true);
     setStatus("");
 
+    const form = e.currentTarget;
+
+    const submittedData = {
+        name: form.elements.name.value,
+        surname: form.elements.surname.value,
+        email: form.elements.email.value,
+        message: form.elements.message.value
+    };
+
     try {
         const response = await fetch(
             `${import.meta.env.VITE_API_URL}/api/contact`,
@@ -38,7 +47,7 @@ const handleSubmit = async (e) => {
                     "Content-Type": "application/json"
                 },
 
-                body: JSON.stringify(formData)
+                body: JSON.stringify(submittedData)
             }
         );
 
@@ -57,8 +66,9 @@ const handleSubmit = async (e) => {
             message: ""
         });
 
-    } catch (error) {
+        form.reset();
 
+    } catch (error) {
         console.error(error);
 
         setStatus(
@@ -168,6 +178,7 @@ const handleSubmit = async (e) => {
                       type="text"
                       id="name"
                       name="name"
+                      value = {formData.name}
                       onChange={handleChange}
                       placeholder="Enter your name"
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition"
@@ -187,6 +198,7 @@ const handleSubmit = async (e) => {
                       type="text"
                       id="surname"
                       name="surname"
+                      value = {formData.surname}
                       onChange={handleChange}
                       placeholder="Enter your surname"
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition"
@@ -209,6 +221,7 @@ const handleSubmit = async (e) => {
                     type="email"
                     id="email"
                     name="email"
+                    value = {formData.email}
                     onChange={handleChange}
                     placeholder="you@example.com"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition"
@@ -229,6 +242,7 @@ const handleSubmit = async (e) => {
                     id="message"
                     name="message"
                     rows="6"
+                    value = {formData.message}
                     onChange={handleChange}
                     placeholder="How can we help you?"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg outline-none resize-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition"

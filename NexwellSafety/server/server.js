@@ -1,10 +1,14 @@
+import "dotenv/config";
+
 import express from "express";
 import cors from "cors";
-import dotenv from "dotenv";
+
+console.log(
+    "API key loaded:",
+    process.env.RESEND_API_KEY ? "YES" : "NO"
+);
 
 import contactRoutes from "./routes/contactRoutes.js";
-
-dotenv.config();
 
 const app = express();
 
