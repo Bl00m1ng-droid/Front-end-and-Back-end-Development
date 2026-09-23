@@ -1,11 +1,20 @@
-const express = require("express");
-const { Resend } = require("resend");
+import express from "express";
+import { Resend } from "resend";
+import rateLimit from "express-rate-limit";
 
 const router = express.Router();
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-router.post("/contact", async (req, res) => {
+const contactLimiter = rateLimit({
+    windowMs: 15 * 60 * 1000,
+    max: 5,
+    message: {
+        message: "Too many requests. Please try again later."
+    }
+});
+
+router.post("/contact", contactLimiter, async (req, res) => {
     try {
         const {
             name,
@@ -14,20 +23,15 @@ router.post("/contact", async (req, res) => {
             message
         } = req.body;
 
-        // Validate fields
         if (!name || !surname || !email || !message) {
             return res.status(400).json({
                 message: "Please complete all fields."
             });
         }
 
-        // Send email
-        const { data, error } = await resend.emails.send({
+        const { error } = await resend.emails.send({
             from: `Nexwell Website <${process.env.EMAIL_FROM}>`,
             to: [process.env.CONTACT_EMAIL],
-
-            // This allows the client to click Reply
-            // and reply directly to the customer.
             replyTo: email,
 
             subject: `New Website Enquiry - ${name} ${surname}`,
@@ -45,18 +49,15 @@ router.post("/contact", async (req, res) => {
                     <hr />
 
                     <p>
-                        <strong>Name:</strong>
-                        ${name}
+                        <strong>Name:</strong> ${name}
                     </p>
 
                     <p>
-                        <strong>Surname:</strong>
-                        ${surname}
+                        <strong>Surname:</strong> ${surname}
                     </p>
 
                     <p>
-                        <strong>Email:</strong>
-                        ${email}
+                        <strong>Email:</strong> ${email}
                     </p>
 
                     <h3>Message</h3>
@@ -90,4 +91,4 @@ router.post("/contact", async (req, res) => {
     }
 });
 
-module.exports = router;
+export default router;
