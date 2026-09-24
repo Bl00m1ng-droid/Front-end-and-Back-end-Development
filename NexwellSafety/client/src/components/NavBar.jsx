@@ -22,7 +22,7 @@ function NavBar() {
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <nav className="relative bg-black px-4 md:px-6 py-2 flex items-center justify-between z-50">
+    <nav className="relative bg-black px-4 md:px-6 h-14 md:h-auto py-0 md:py-2 flex items-center justify-between z-50">
 
       {/* Logo - now visible on all screens, smaller on mobile */}
       <Link to="/" className="block" onClick={closeMenu}>

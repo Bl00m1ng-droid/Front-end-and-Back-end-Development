@@ -81,7 +81,7 @@ function Home() {
             {/* ================= HERO ================= */}
 
             <section
-                className="relative min-h-[85vh] flex items-center overflow-hidden"
+                className="relative min-h-[calc(100dvh-3.5rem)] md:min-h-[85vh] flex items-center overflow-hidden"
                 style={{
                     backgroundImage: `url(${poster})`,
                     backgroundSize: "cover",
