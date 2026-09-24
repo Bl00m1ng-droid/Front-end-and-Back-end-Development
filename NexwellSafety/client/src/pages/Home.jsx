@@ -6,7 +6,7 @@ import greenset from "../assets/greenstripTwopiece.jpeg";
 import shirt1 from "../assets/shirt1.jpeg";
 
 import Footer from "../components/Footer";
-
+import { Helmet } from "react-helmet"; // Import Helmet for SEO meta tags
 
 function WhatsappIcon({ className = "h-5 w-5" }) {
     return (
