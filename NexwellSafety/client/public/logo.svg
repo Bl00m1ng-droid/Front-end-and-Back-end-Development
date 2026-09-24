@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <!-- Orange square with "ne" -->
+  <rect x="0" y="0" width="24" height="24" fill="#f36c21"/>
+  <text x="6" y="17" font-family="Arial, sans-serif" font-size="14" fill="white" font-weight="bold">ne</text>
+
+  <!-- "xwell" text -->
+  <text x="28" y="17" font-family="Arial, sans-serif" font-size="14" fill="white" font-weight="bold">xwell</text>
+
+  <!-- "SAFETYWEAR" text -->
+  <text x="28" y="32" font-family="Arial, sans-serif" font-size="8" fill="#f36c21" font-weight="bold">SAFETYWEAR</text>
+</svg>
