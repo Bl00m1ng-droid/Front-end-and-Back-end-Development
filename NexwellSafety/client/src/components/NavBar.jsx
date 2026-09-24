@@ -24,114 +24,94 @@ function NavBar() {
   };
 
   return (
-    <nav className="relative bg-black px-4 sm:px-6 py-2 z-50">
+    <nav className="relative bg-black px-6 py-2 flex items-center justify-between z-50">
 
-      {/* =========================
-          MAIN NAVBAR
-      ========================== */}
-      <div className="flex items-center justify-between">
+      {/* Logo - Desktop only */}
+      <Link
+        to="/"
+        className="hidden md:block"
+        onClick={closeMenu}
+      >
+        <img
+          src={logo}
+          alt="Nexwell Safety"
+          className="w-full max-w-sm h-auto object-contain"
+        />
+      </Link>
 
-        {/* Logo - Desktop only */}
-        <Link
+      {/* Desktop Navigation */}
+      <div className="hidden md:flex md:flex-row md:ml-auto gap-2 text-lg font-semibold">
+        <NavLink
           to="/"
-          className="hidden md:block"
-          onClick={closeMenu}
+          end
+          className={linkClass}
         >
-          <img
-            src={logo}
-            alt="Nexwell Safety"
-            className="w-52 h-auto object-contain"
-          />
-        </Link>
+          Home
+        </NavLink>
 
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-2 text-lg font-semibold ml-auto">
-          <NavLink
-            to="/"
-            end
-            className={linkClass}
-          >
-            Home
-          </NavLink>
-
-          <NavLink
-            to="/catalog"
-            className={linkClass}
-          >
-            Catalog
-          </NavLink>
-
-          <NavLink
-            to="/contactUs"
-            className={linkClass}
-          >
-            Contact Us
-          </NavLink>
-        </div>
-
-        {/* =========================
-            MOBILE HAMBURGER
-        ========================== */}
-        <button
-          type="button"
-          aria-label={isOpen ? "Close menu" : "Open menu"}
-          aria-expanded={isOpen}
-          onClick={() => setIsOpen(!isOpen)}
-          className="
-            md:hidden
-            ml-auto
-            p-2
-            text-white
-            rounded-md
-            hover:text-orange-400
-            focus:outline-none
-            focus:ring-2
-            focus:ring-orange-500
-            transition-colors
-            duration-200
-          "
+        <NavLink
+          to="/catalog"
+          className={linkClass}
         >
-          <svg
-            className="w-7 h-7"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            {isOpen ? (
-              /* X icon */
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M6 18L18 6M6 6l12 12"
-              />
-            ) : (
-              /* Hamburger icon */
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            )}
-          </svg>
-        </button>
+          Catalog
+        </NavLink>
+
+        <NavLink
+          to="/contactUs"
+          className={linkClass}
+        >
+          Contact Us
+        </NavLink>
       </div>
 
-      {/* =========================
-          MOBILE NAVIGATION
-      ========================== */}
+      {/* Mobile Hamburger */}
+      <button
+        type="button"
+        aria-label={isOpen ? "Close menu" : "Open menu"}
+        aria-expanded={isOpen}
+        onClick={() => setIsOpen(!isOpen)}
+        className="
+          md:hidden
+          ml-auto
+          text-white
+          focus:outline-none
+        "
+      >
+        <svg
+          className="w-7 h-7"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          {isOpen ? (
+            /* X */
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M6 18L18 6M6 6l12 12"
+            />
+          ) : (
+            /* Hamburger */
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          )}
+        </svg>
+      </button>
+
+      {/* Mobile Navigation */}
       <div
         className={`
-          md:hidden
           absolute
-          left-0
           top-full
+          left-0
           w-full
           bg-black
-          border-t
-          border-gray-800
-          shadow-lg
+          md:hidden
           overflow-hidden
           transition-all
           duration-300
@@ -143,7 +123,7 @@ function NavBar() {
           }
         `}
       >
-        <div className="flex flex-col items-center py-4 gap-2 text-lg font-semibold">
+        <div className="flex flex-col items-center gap-2 py-4 text-lg font-semibold">
 
           <NavLink
             to="/"
@@ -172,8 +152,10 @@ function NavBar() {
 
         </div>
       </div>
+
     </nav>
   );
 }
 
 export default NavBar;
+
