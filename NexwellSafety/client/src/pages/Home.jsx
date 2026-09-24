@@ -71,12 +71,12 @@ function Home() {
     return (
         <>
         {/*SEO Meta Tags*/}
-        <Head>
+        <Helmet>
             <title>Nexwell Safety - Your Safety is Our Priority</title>
              <meta name="description" content="Your safety is our priority. Discover our range of quality safety equipment and protective products." />
              <meta name="keywords" content="safety equipment, protective gear, workwear, safety footwear" />
              <meta name="author" content="Nexwell Safety" />
-        </Head>
+        </Helmet>
        
             {/* ================= HERO ================= */}
 
