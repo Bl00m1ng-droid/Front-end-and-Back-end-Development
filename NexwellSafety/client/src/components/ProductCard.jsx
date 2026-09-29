@@ -179,7 +179,7 @@ const products = [
   {
     id: 18,
     name: "Orange Safety Set",
-    price: 50.00,
+    price: 30.00,
     description: "High-visibility orange workwear set designed for comfort, durability, and increased visibility in demanding work environments.",
     sizesAvailable:["S", "M", "L", "XL"],
     category: "Sets",
@@ -188,7 +188,7 @@ const products = [
   {
     id: 19,
     name: "Reflective Shirt Set",
-    price: 50.00,
+    price: 30.00,
     description: "Comfortable reflective workwear set designed to improve visibility while providing practical everyday workplace protection.",
     sizesAvailable:["S", "M", "L", "XL"],
     category: "Sets",
